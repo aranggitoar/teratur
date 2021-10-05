@@ -1,0 +1,9 @@
+Modified:
+tutor/global/course-archive-filter-bar.php
+tutor/loop/course.php
+tutor/loop/meta.php
+tutor/widgets/archive-course.php
+
+Added:
+template-parts/tutor-index-main-info.php
+	(called in tutor/widgets/archive-course.php)
