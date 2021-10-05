@@ -49,9 +49,45 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap);
 :root {
-  --color_primary: #3e6a40;
-  --color_primary-2: #0e655f;
-  --color_primary-3: #149289;
+  --color_primary-shade-6: #1f3520;
+  --color_primary-shade-5: #233c24;
+  --color_primary-shade-4: #274328;
+  --color_primary-shade-3: #2b492d;
+  --color_primary-shade-2: #2F5031;
+  --color_primary-shade-1: #335735;
+  --color_primary: #375d39;
+  --color_primary-tint-1: #406d43;
+  --color_primary-tint-2: #4a7e4c;
+  --color_primary-tint-3: #538e56;
+  --color_primary-tint-4: #5d9e60;
+  --color_primary-tint-5: #6ca96f;
+  --color_primary-tint-6: #7db27f;
+  --color_analogous_r-shade-6: #1f352f;
+  --color_analogous_r-shade-5: #233c35;
+  --color_analogous_r-shade-4: #27433b;
+  --color_analogous_r-shade-3: #2b4941;
+  --color_analogous_r-shade-2: #2f5047;
+  --color_analogous_r-shade-1: #33574c;
+  --color_analogous_r: #375d52;
+  --color_analogous_r-tint-1: #406d61;
+  --color_analogous_r-tint-2: #4a7e6f;
+  --color_analogous_r-tint-3: #538e7d;
+  --color_analogous_r-tint-4: #5d9e8c;
+  --color_analogous_r-tint-5: #6ca998;
+  --color_analogous_r-tint-6: #7db2a3;
+  --color_analogous_l-shade-6: #2c351f;
+  --color_analogous_l-shade-5: #323c23;
+  --color_analogous_l-shade-4: #384327;
+  --color_analogous_l-shade-3: #3d492b;
+  --color_analogous_l-shade-2: #43502f;
+  --color_analogous_l-shade-1: #485733;
+  --color_analogous_l: #4e5d37;
+  --color_analogous_l-tint-1: #5b6d40;
+  --color_analogous_l-tint-2: #697e4a;
+  --color_analogous_l-tint-3: #778e53;
+  --color_analogous_l-tint-4: #849e5d;
+  --color_analogous_l-tint-5: #91a96c;
+  --color_analogous_l-tint-6: #9db27d;
   --color_complementary: #38080b;
   --color_complementary-2: #650e14;
   --color_complementary-3: #92141d;
@@ -485,6 +521,9 @@ body {
   font-weight: 300;
   min-height: 100vh;
 }
+body:not(.home) {
+  background: var(--color_analogous_l) !important;
+}
 body::before {
   content: "";
   height: 100%;
@@ -493,22 +532,22 @@ body::before {
   z-index: -1000;
 }
 @media (min-width: 576px) {
-  body *:not(#background-layer, #front-page-card) {
+  body *:not(#background-layer, #front-page-card) > * {
     max-width: 450px;
   }
 }
 @media (min-width: 768px) {
-  body *:not(#background-layer, #front-page-card) {
+  body *:not(#background-layer, #front-page-card) > * {
     max-width: 650px;
   }
 }
 @media (min-width: 992px) {
-  body *:not(#background-layer, #front-page-card) {
+  body *:not(#background-layer, #front-page-card) > * {
     max-width: 850px;
   }
 }
 @media (min-width: 1200px) {
-  body *:not(#background-layer, #front-page-card) {
+  body *:not(#background-layer, #front-page-card) > * {
     max-width: 1100px;
   }
 }
@@ -528,6 +567,12 @@ hr {
   border-top: 1px solid #fff;
   width: 90%;
   margin: 0;
+}
+#masthead > hr {
+  margin-bottom: 2em;
+}
+#colophon > hr {
+  margin-top: 2em;
 }
 
 ul,
@@ -581,14 +626,14 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: var(--color_complementary-5);
+  color: var(--color_analogous_r-tint-6);
   text-decoration: none;
 }
 a:visited {
   color: inherit;
 }
 a:hover, a:focus, a:active {
-  color: var(--color_complementary-4);
+  color: var(--color_analogous_r-tint-4);
 }
 a:focus {
   outline: thin dotted;
@@ -699,8 +744,13 @@ textarea {
 /* Footer
 --------------------------------------------- */
 .site-footer {
+  align-items: center;
+  background-color: var(--color_primary);
   display: flex;
   flex-direction: column;
+  height: 28em;
+  justify-content: center;
+  width: 100%;
 }
 .site-footer ul {
   list-style: none;
@@ -730,12 +780,11 @@ textarea {
 --------------------------------------------- */
 #masthead {
   align-items: center;
-  background: none;
+  background-color: var(--color_primary);
   display: flex;
   flex-direction: column;
-  height: 50px;
+  height: 8em;
   justify-content: center;
-  margin: 3em 0 4em;
   width: 100%;
 }
 #masthead svg {
@@ -1126,6 +1175,9 @@ textarea {
 
 /* Header image
 --------------------------------------------- */
+#site-header {
+  margin-top: 2em;
+}
 #site-header img {
   border-radius: 5px;
   z-index: 1;
@@ -1196,32 +1248,32 @@ textarea {
   margin: 2em 0;
 }
 @media (max-width: 576px) {
-  #tutor-index-main-info-container {
+  #tutor-index-main-info-container * {
     max-width: 315px;
   }
 }
 @media (min-width: 576px) {
-  #tutor-index-main-info-container {
+  #tutor-index-main-info-container * {
     max-width: 450px;
   }
 }
 @media (min-width: 768px) {
-  #tutor-index-main-info-container {
+  #tutor-index-main-info-container * {
     max-width: 650px;
   }
 }
 @media (min-width: 992px) {
-  #tutor-index-main-info-container {
+  #tutor-index-main-info-container * {
     max-width: 850px;
   }
 }
 @media (min-width: 1200px) {
-  #tutor-index-main-info-container {
+  #tutor-index-main-info-container * {
     max-width: 1100px;
   }
 }
 @media (min-width: 1400px) {
-  #tutor-index-main-info-container {
+  #tutor-index-main-info-container * {
     max-width: 1250px;
   }
 }

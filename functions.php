@@ -84,8 +84,8 @@ if ( ! function_exists( 'teratur_setup' ) ) :
 			array(
 				'default-image'      => "https://unsplash.com/photos/9BlA8vech74",
 				'default-text-color' => 'fff',
-				'width'              => 1000,
-				'height'             => 250,
+				'width'              => 600,
+				'height'             => 600,
 				'flex-width'         => true,
 				'flex-height'        => true,
 			)
