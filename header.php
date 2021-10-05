@@ -29,10 +29,10 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'teratur' ); ?></a>
 
 
-	<header id="masthead" class="site-header">
 	<?php
 	if ( ! is_front_page() ) :
 		?>
+	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
 			<?php
 			wp_nav_menu(
@@ -69,8 +69,8 @@
 		endif;
 		?>
 		</nav><!-- #site-navigation -->
+		<hr>
+	</header><!-- #masthead -->
 		<?php
 	endif;
 	?>
-	<hr>
-	</header><!-- #masthead -->
