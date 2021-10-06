@@ -49,6 +49,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap);
 :root {
+  --color_primary-shade-10: #101b10;
+  --color_primary-shade-9: #142114;
+  --color_primary-shade-8: #172818;
+  --color_primary-shade-7: #1b2f1c;
   --color_primary-shade-6: #1f3520;
   --color_primary-shade-5: #233c24;
   --color_primary-shade-4: #274328;
@@ -62,6 +66,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --color_primary-tint-4: #5d9e60;
   --color_primary-tint-5: #6ca96f;
   --color_primary-tint-6: #7db27f;
+  --color_primary-tint-7: #8dbc8f;
+  --color_primary-tint-8: #9dc69f;
+  --color_primary-tint-9: #aecfaf;
+  --color_primary-tint-10: #bed9bf;
+  --color_analogous_r-shade-10: #101b18;
+  --color_analogous_r-shade-9: #14211d;
+  --color_analogous_r-shade-8: #172823;
+  --color_analogous_r-shade-7: #1b2f29;
   --color_analogous_r-shade-6: #1f352f;
   --color_analogous_r-shade-5: #233c35;
   --color_analogous_r-shade-4: #27433b;
@@ -75,6 +87,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --color_analogous_r-tint-4: #5d9e8c;
   --color_analogous_r-tint-5: #6ca998;
   --color_analogous_r-tint-6: #7db2a3;
+  --color_analogous_r-tint-7: #8dbcaf;
+  --color_analogous_r-tint-8: #9dc6ba;
+  --color_analogous_r-tint-9: #aecfc6;
+  --color_analogous_r-tint-10: #bed9d1;
+  --color_analogous_l-shade-10: #161b10;
+  --color_analogous_l-shade-9: #1c2114;
+  --color_analogous_l-shade-8: #212817;
+  --color_analogous_l-shade-7: #272f1b;
   --color_analogous_l-shade-6: #2c351f;
   --color_analogous_l-shade-5: #323c23;
   --color_analogous_l-shade-4: #384327;
@@ -88,11 +108,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --color_analogous_l-tint-4: #849e5d;
   --color_analogous_l-tint-5: #91a96c;
   --color_analogous_l-tint-6: #9db27d;
-  --color_complementary: #38080b;
-  --color_complementary-2: #650e14;
-  --color_complementary-3: #92141d;
-  --color_complementary-4: #bf1a26;
-  --color_complementary-5: #e22a37;
+  --color_analogous_l-tint-7: #a9bc8d;
+  --color_analogous_l-tint-8: #b5c69d;
+  --color_analogous_l-tint-9: #c2cfae;
+  --color_analogous_l-tint-10: #ced9be;
 }
 
 /*
@@ -521,8 +540,11 @@ body {
   font-weight: 300;
   min-height: 100vh;
 }
-body:not(.home) {
-  background: var(--color_analogous_l) !important;
+body:not(.home, .single-bible-reader) {
+  background: var(--color_primary) !important;
+}
+body:not(.home, .single-bible-reader)::before {
+  content: none;
 }
 body::before {
   content: "";
@@ -626,14 +648,14 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: var(--color_analogous_r-tint-6);
+  color: var(--color_analogous_r-tint-8);
   text-decoration: none;
 }
 a:visited {
   color: inherit;
 }
 a:hover, a:focus, a:active {
-  color: var(--color_analogous_r-tint-4);
+  color: var(--color_analogous_r-tint-6);
 }
 a:focus {
   outline: thin dotted;
@@ -660,7 +682,7 @@ button.teratur-button,
 input[type=button].teratur-button,
 input[type=reset].teratur-button,
 input[type=submit].teratur-button {
-  background: var(--color_complementary);
+  background: var(--color_primary-shade-6);
   border-radius: 5px;
   color: #fff;
   display: block;
@@ -756,6 +778,9 @@ textarea {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.site-footer .container:last-child {
+  width: 100%;
 }
 .site-footer .container .row {
   display: flex;
@@ -973,7 +998,7 @@ textarea {
 }
 #front-page-card section:last-child div {
   align-items: center;
-  background-color: #08383500;
+  background-color: transparent;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   display: flex;
@@ -986,8 +1011,8 @@ textarea {
   width: 80%;
 }
 #front-page-card section:last-child div:hover, #front-page-card section:last-child div:focus {
-  background-color: #08383599;
-  transform: translateX(15px);
+  background-color: #375d3922;
+  transform: translateX(20px);
 }
 #front-page-card section:last-child div::before {
   background: inherit;
