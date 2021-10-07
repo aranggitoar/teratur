@@ -266,3 +266,86 @@ function replace_all_title_separator($sep)
 }
 
 add_filter( 'document_title_separator', 'replace_all_title_separator' );
+
+
+/**
+ * Initialize arguments for empty pages for elementor's CPT.
+ */
+	register_post_type(
+		'page',
+		array(
+			'labels'                => array(
+				'name_admin_bar' => _x( 'Page', 'add new from admin bar' ),
+			),
+			'public'                => true,
+			'publicly_queryable'    => false,
+			'_builtin'              => true, /* internal use only. don't use this when registering your own post type. */
+			'_edit_link'            => 'post.php?post=%d', /* internal use only. don't use this when registering your own post type. */
+			'capability_type'       => 'page',
+			'map_meta_cap'          => true,
+			'menu_position'         => 20,
+			'menu_icon'             => 'dashicons-admin-page',
+			'hierarchical'          => true,
+			'rewrite'               => false,
+			'query_var'             => false,
+			'delete_with_user'      => true,
+			'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'page-attributes', 'custom-fields', 'comments', 'revisions' ),
+			'show_in_rest'          => true,
+			'rest_base'             => 'pages',
+			'rest_controller_class' => 'WP_REST_Posts_Controller',
+		)
+	);
+
+function initialize_empty_page_for_elementor_cpt()
+{
+
+	$labels = array(
+		'name' => 'Empty Pages',
+		'singular_name' => 'Empty Page',
+		'name_admin_bar' => _x( 'Empty Page', 'add new from admin bar' ),
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'description' => 'Empty pages for WordPress', 
+		'capability_type' => 'page',
+		'hierarchical' => true,
+		'public' => true,
+		'has_archive' => true,
+		'show_ui' => true,
+		'menu_position' => 4,
+		'show_in_menu' => true,
+		'show_in_rest' => true,
+		'supports' => array( 'title', 'editor', 'author', 'thumbnail' ),
+	);
+
+	return $args;
+
+}
+
+/**
+ * Register the empty page for elementor's CPT.
+ */
+function register_empty_page_for_elementor_cpt()
+{
+	register_post_type(
+		"empty-pages",
+		initialize_empty_page_for_elementor_cpt()
+	);
+}
+
+add_action( 'init', 'register_empty_page_for_elementor_cpt' );
+
+function wpse_101072_flatten_hierarchies( $post_link, $post ) {
+    if ( 'empty-pages' != $post->post_type )
+        return $post_link;
+
+    $uri = '';
+    foreach ( $post->ancestors as $parent ) {
+        $uri = get_post( $parent )->post_name . "/" . $uri;
+    }
+
+    return str_replace( $uri, '', $post_link );
+}
+
+add_filter( 'post_type_link', 'wpse_101072_flatten_hierarchies', 10, 2 );

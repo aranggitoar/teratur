@@ -49,6 +49,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap);
 :root {
+  --color_white-shade-1: #ededed;
+  --color_white-shade-2: #dbdbdb;
+  --color_white-shade-3: #c8c8c8;
+  --color_white-shade-4: #b6b6b6;
   --color_primary-shade-10: #101b10;
   --color_primary-shade-9: #142114;
   --color_primary-shade-8: #172818;
@@ -57,7 +61,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --color_primary-shade-5: #233c24;
   --color_primary-shade-4: #274328;
   --color_primary-shade-3: #2b492d;
-  --color_primary-shade-2: #2F5031;
+  --color_primary-shade-2: #2f5031;
   --color_primary-shade-1: #335735;
   --color_primary: #375d39;
   --color_primary-tint-1: #406d43;
