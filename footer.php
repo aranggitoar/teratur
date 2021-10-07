@@ -13,9 +13,8 @@ if ( ! is_front_page() ) {
 	?>
 
 	<footer id="colophon" class="site-footer">
-		<hr>
 		<div class="container">
-			<div class="row">
+			<div id="about-us">
 				<div>
 					<h5>Tentang Kami</h5>
 					<p>Alkitab Kita adalah suatu pelayanan daring interdenominasional yang didukung dan diluncurkan oleh Yayasan Alkitab Bahasa Kita (Albata). Alkitab Kita hadir untuk memperlengkapi setiap anggota Tubuh Kristus memahami, menafsirkan dan mengajar Firman Tuhan di mana saja, kapan saja, bagaikan penerjemah Alkitab.</p>
@@ -37,15 +36,15 @@ if ( ! is_front_page() ) {
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
+			<div id="copyright-and-social">
 				<div>
-					<p class="copyright-text">Hak Cipta &copy; 2021
+					<p>Hak Cipta &copy; 2021
 						<a href="https://albata.info">Yayasan Alkitab BahasaKita</a>
 					</p>
 				</div>
 
 				<div>
-					<ul class="social-icons">
+					<ul>
 						<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
 						<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
 						<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>

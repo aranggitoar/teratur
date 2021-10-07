@@ -14,7 +14,7 @@ get_template_part( 'wp-load.php' );
 	<div id="front-page-card">
 		<section>
 			<h1>alkitabkita.info</h1>
-			<h2>Memperlengkapi Anda memahami Alkitab<br>— seperti penerjemah Alkitab.</h2>
+			<h2>Memperlengkapi Anda memahami Alkitab — seperti penerjemah Alkitab.</h2>
 		</section>
 		<section>
 			<div>

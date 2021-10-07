@@ -34,18 +34,6 @@
 		?>
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'common-menu',
-					'menu_id'        => 'common-menu',
-				)
-			);
-			?>
-			<div id="nav-bg"></div>
-			<a href="javascript:void(null);" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<span></span><span></span>
-			</a>
 			<a href="<?php echo esc_attr( get_home_url() ); ?>">
 				<svg width="48" height="48" version="1.1" viewBox="0 0 12.7 12.7" xmlns="http://www.w3.org/2000/svg">
 					<g transform="matrix(1.5 0 0 1.5 -8.3977e-7 .00032166)">
@@ -56,20 +44,32 @@
 					</g>
 				</svg>
 			</a>
-		<?php
-		if ( get_post_type() === 'courses' || 'lesson' ) :
-			?>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'special-menu',
-					'menu_id'        => 'special-menu',
-				)
-			);
-		endif;
-		?>
+				<div id="menu-container">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'common-menu',
+							'menu_id'        => 'common-menu',
+						)
+					);
+					?>
+					<a href="javascript:void(null);" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<span></span><span></span>
+					</a>
+				<?php
+				if ( get_post_type() === 'courses' || 'lesson' ) :
+					?>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'special-menu',
+							'menu_id'        => 'special-menu',
+						)
+					);
+				endif;
+				?>
+			</div>
 		</nav><!-- #site-navigation -->
-		<hr>
 	</header><!-- #masthead -->
 		<?php
 	endif;
