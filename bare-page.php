@@ -13,7 +13,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-			get_template_part( 'template-parts/content', get_post_type() );
+	<?php the_content(); ?>	
 
 	</main><!-- #main -->
 
