@@ -24,8 +24,6 @@ if ( ! function_exists( 'teratur_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on _s, use a find and replace
-		 * to change 'teratur' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'teratur', get_template_directory() . '/languages' );
 
@@ -230,11 +228,16 @@ function alkitabkita_lesson_slug()
  */
 function alkitabkita_deregister_scripts()
 {
-	if ( get_post_type() === 'courses' || is_front_page() ) {
+	if ( ! ( get_post_type() === 'bible-reader' ) ) {
 		wp_deregister_script( 'bible-reader' );
 		wp_dequeue_script( 'bible-reader' );
 		wp_deregister_style( 'bible-reader' );
 		wp_dequeue_style( 'bible-reader' );
+	}
+
+	if ( ! ( ( get_post_type() === 'courses' ) || ( get_post_type() === 'lessons' ) ) ) {
+		wp_deregister_style( 'tutor-frontend' );
+		wp_dequeue_style( 'tutor-frontend' );
 	}
 }
 
