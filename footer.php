@@ -11,7 +11,6 @@
 
 if ( ! is_front_page() ) {
 	?>
-
 	<footer id="colophon" class="site-footer">
 		<div class="container">
 			<div id="about-us">
