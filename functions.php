@@ -272,45 +272,20 @@ add_filter( 'document_title_separator', 'replace_all_title_separator' );
 
 
 /**
- * Initialize arguments for empty pages for elementor's CPT.
+ * Initialize arguments for bare pages CPT for elementor.
  */
-	register_post_type(
-		'page',
-		array(
-			'labels'                => array(
-				'name_admin_bar' => _x( 'Page', 'add new from admin bar' ),
-			),
-			'public'                => true,
-			'publicly_queryable'    => false,
-			'_builtin'              => true, /* internal use only. don't use this when registering your own post type. */
-			'_edit_link'            => 'post.php?post=%d', /* internal use only. don't use this when registering your own post type. */
-			'capability_type'       => 'page',
-			'map_meta_cap'          => true,
-			'menu_position'         => 20,
-			'menu_icon'             => 'dashicons-admin-page',
-			'hierarchical'          => true,
-			'rewrite'               => false,
-			'query_var'             => false,
-			'delete_with_user'      => true,
-			'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'page-attributes', 'custom-fields', 'comments', 'revisions' ),
-			'show_in_rest'          => true,
-			'rest_base'             => 'pages',
-			'rest_controller_class' => 'WP_REST_Posts_Controller',
-		)
-	);
-
-function initialize_empty_page_for_elementor_cpt()
+function initialize_bare_page_cpt_for_elementor()
 {
 
 	$labels = array(
-		'name' => 'Empty Pages',
-		'singular_name' => 'Empty Page',
-		'name_admin_bar' => _x( 'Empty Page', 'add new from admin bar' ),
+		'name' => 'Bare',
+		'singular_name' => 'Bare',
+		'name_admin_bar' => _x( 'Bare', 'add new from admin bar' ),
 	);
 
 	$args = array(
 		'labels' => $labels,
-		'description' => 'Empty pages for WordPress', 
+		'description' => 'Bare pages for WordPress', 
 		'capability_type' => 'page',
 		'hierarchical' => true,
 		'public' => true,
@@ -327,28 +302,28 @@ function initialize_empty_page_for_elementor_cpt()
 }
 
 /**
- * Register the empty page for elementor's CPT.
+ * Register the bare page CPT for elementor.
  */
-function register_empty_page_for_elementor_cpt()
+function register_bare_page_cpt_for_elementor()
 {
 	register_post_type(
-		"empty-pages",
-		initialize_empty_page_for_elementor_cpt()
+		"bare",
+		initialize_bare_page_cpt_for_elementor()
 	);
 }
 
-add_action( 'init', 'register_empty_page_for_elementor_cpt' );
+add_action( 'init', 'register_bare_page_cpt_for_elementor' );
 
-function wpse_101072_flatten_hierarchies( $post_link, $post ) {
-    if ( 'empty-pages' != $post->post_type )
-        return $post_link;
+function flatten_hierarchies_for_bare_page_cpt( $post_link, $post ) {
+	if ( 'bare' != $post->post_type )
+		return $post_link;
 
-    $uri = '';
-    foreach ( $post->ancestors as $parent ) {
-        $uri = get_post( $parent )->post_name . "/" . $uri;
-    }
+	$uri = '';
+	foreach ( $post->ancestors as $parent ) {
+		$uri = get_post( $parent )->post_name . "/" . $uri;
+	}
 
-    return str_replace( $uri, '', $post_link );
+	return str_replace( $uri, '', $post_link );
 }
 
-add_filter( 'post_type_link', 'wpse_101072_flatten_hierarchies', 10, 2 );
+add_filter( 'post_type_link', 'flatten_hierarchies_for_bare_page_cpt', 10, 2 );
