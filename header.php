@@ -44,33 +44,36 @@
 					</g>
 				</svg>
 			</a>
-				<div id="menu-container">
+			<div id="menu-container">
+				<a class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span></span>
+					<span></span>
+				</a>
+				<div id="menu-items-container">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'common-menu',
+								'menu_id'        => 'common-menu',
+							)
+						);
+						?>
 					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'common-menu',
-							'menu_id'        => 'common-menu',
-						)
-					);
+					if ( get_post_type() === 'courses' || 'lesson' ) :
+						?>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'special-menu',
+								'menu_id'        => 'special-menu',
+							)
+						);
+					endif;
 					?>
-					<a href="javascript:void(null);" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-						<span></span><span></span>
-					</a>
-				<?php
-				if ( get_post_type() === 'courses' || 'lesson' ) :
-					?>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'special-menu',
-							'menu_id'        => 'special-menu',
-						)
-					);
-				endif;
-				?>
+				</div>
 			</div>
 		</nav><!-- #site-navigation -->
-	</header>
+	</header><!-- #masthead -->
 		<?php
 	endif;
 	?>
