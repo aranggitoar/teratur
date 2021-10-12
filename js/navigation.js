@@ -37,14 +37,14 @@
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
-			button.children[ 1 ].style.width = 'initial';
+			button.children[ 1 ].style.width = '1em';
 			button.children[ 0 ].style.transform = 'initial';
 			button.children[ 1 ].style.transform = 'initial';
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
-			button.children[ 1 ].style.width = '16px';
-			button.children[ 0 ].style.transform = 'translateY(3.5px) rotate(45deg)';
-			button.children[ 1 ].style.transform = 'translateY(-3.5px) rotate(-45deg)';
+			button.children[ 1 ].style.width = '1.5em';
+			button.children[ 0 ].style.transform = 'translateY(4px) rotate(45deg)';
+			button.children[ 1 ].style.transform = 'translateY(-4px) rotate(-45deg)';
 		}
 	} );
 

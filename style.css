@@ -49,10 +49,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap);
 :root {
+  --color_black-tint-1: #121212;
+  --color_black-tint-2: #242424;
+  --color_black-tint-3: #373737;
+  --color_black-tint-4: #494949;
+  --color_black-tint-5: #5b5b5b;
+  --color_black-tint-6: #6d6d6d;
   --color_white-shade-1: #ededed;
   --color_white-shade-2: #dbdbdb;
   --color_white-shade-3: #c8c8c8;
   --color_white-shade-4: #b6b6b6;
+  --color_white-shade-5: #a4a4a4;
+  --color_white-shade-6: #929292;
   --color_primary-shade-10: #101b10;
   --color_primary-shade-9: #142114;
   --color_primary-shade-8: #172818;
@@ -788,6 +796,7 @@ textarea {
 }
 .site-footer::after {
   background-color: var(--color_primary);
+  border-top: 1px solid var(--color_black-tint-1);
   content: "";
   height: 2em;
   max-width: 100vw;
@@ -872,6 +881,7 @@ textarea {
 #masthead::after {
   background-color: var(--color_primary);
   bottom: -1em;
+  border-bottom: 1px solid var(--color_black-tint-1);
   content: "";
   height: 2em;
   max-width: 100vw;
@@ -888,42 +898,10 @@ textarea {
   transform: translateY(0.3em);
   filter: drop-shadow(0.125em 0.125em 0.1em #070707);
 }
-#masthead #site-navigation {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  flex-direction: row-reverse;
-  position: relative;
-  justify-content: space-between;
-  width: 90%;
-}
-#masthead #site-navigation #menu-container {
-  display: flex;
-  flex-direction: row;
-}
-#masthead #site-navigation #menu-container .menu-toggle span {
-  border-bottom: 1.2px solid #ededed;
-  display: inline-block;
-}
-#masthead #site-navigation #menu-container .menu-toggle span:first-child {
-  width: 16px;
-}
-#masthead #site-navigation #menu-container .menu-toggle span:last-child {
-  width: 12px;
-}
-#masthead #site-navigation #menu-container a {
-  color: #fff;
-  font: normal 600 1em Poppins;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 
 @media (orientation: landscape) {
   #masthead #site-navigation {
     flex-direction: row;
-  }
-  #masthead #site-navigation #menu-container ul {
-    display: flex;
   }
   #masthead svg {
     transform: translateY(1em);
@@ -932,9 +910,13 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 #site-navigation {
-  display: block;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  flex-direction: row-reverse;
   position: relative;
-  width: 100%;
+  justify-content: space-between;
+  width: 90%;
   z-index: 1;
 }
 #site-navigation a.menu-toggle {
@@ -950,9 +932,11 @@ textarea {
   z-index: 1;
 }
 #site-navigation a.menu-toggle span {
-  transition: all 300ms;
   background-color: #fff;
+  border-bottom: 1.2px solid #ededed;
+  display: inline-block;
   height: 1.25px;
+  transition: all 300ms;
 }
 #site-navigation a.menu-toggle span:first-child {
   width: 1.5em;
@@ -969,6 +953,7 @@ textarea {
 #site-navigation #menu-items-container::after {
   background-color: inherit;
   bottom: -0.25em;
+  border-bottom: 1px solid var(--color_black-tint-1);
   content: "";
   height: 1em;
   max-width: inherit;
@@ -1009,8 +994,11 @@ textarea {
   margin: 0.5em 1em;
 }
 #site-navigation #menu-items-container a {
+  color: #fff;
+  font: normal 600 1em Poppins;
   display: block;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 /* Small menu. */
@@ -1027,10 +1015,14 @@ textarea {
   #site-navigation #menu-items-container {
     display: flex;
     position: relative;
+    top: initial;
     transform: translateY(0.3em);
   }
   #site-navigation #menu-items-container::after {
     content: none;
+  }
+  #site-navigation #menu-items-container ul {
+    display: flex;
   }
 }
 .site-main .comment-navigation,
