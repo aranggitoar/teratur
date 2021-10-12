@@ -27,7 +27,7 @@ get_template_part( 'wp-load.php' );
 				<a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Petunjuk Penggunaan Bibledit' ) ) ); ?>"><p>Alat Penerjemahan Alkitab</p><p>‣</p></a>
 			</div>
 			<div>
-				<a href="<?php echo esc_attr( get_page_by_title( 'Kursus Alkitab Kita' ) ); ?>"><p>Kursus Alkitab Kita</p><p>‣</p></a>
+				<a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Kursus Alkitab Kita' ) ) ); ?>"><p>Kursus Alkitab Kita</p><p>‣</p></a>
 			</div>
 			<div>
 				<a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Artikel' ) ) ); ?>"><p>Artikel</p><p>‣</p></a>
