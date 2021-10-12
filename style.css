@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap);
 :root {
   --color_black-tint-1: #121212;
   --color_black-tint-2: #242424;
@@ -124,6 +125,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --color_analogous_l-tint-8: #b5c69d;
   --color_analogous_l-tint-9: #c2cfae;
   --color_analogous_l-tint-10: #ced9be;
+}
+
+:root {
+  --font_main-sans: "Poppins", "Helvetica Neue", sans-serif;
+  --font_main-serif: "EB Garamond", "Times", serif;
 }
 
 /*
@@ -1228,6 +1234,11 @@ textarea {
   padding: 1em;
 }
 
+.entry-title {
+  font-size: 2.5em;
+  text-align: center;
+}
+
 .sticky {
   display: block;
 }
@@ -1459,6 +1470,31 @@ textarea {
   #tutor-index-main-info-container * {
     max-width: 1250px;
   }
+}
+
+/* Stylesheet for Elementor
+--------------------------------------------- */
+/* Elementor global variables
+--------------------------------------------- */
+body.elementor-page {
+  --e-global-color-primary: #6ec1e4;
+  --e-global-color-secondary: var(--color_primary);
+  --e-global-color-text: var(--color_primary);
+  --e-global-color-accent: var(--color_primary-tint-4);
+  --e-global-typography-primary-font-family: "Poppins";
+  --e-global-typography-primary-font-weight: 600;
+  --e-global-typography-secondary-font-family: "Poppins";
+  --e-global-typography-secondary-font-weight: 500;
+  --e-global-typography-text-font-family: "Poppins";
+  --e-global-typography-text-font-weight: 300;
+  --e-global-typography-accent-font-family: "Poppins";
+  --e-global-typography-accent-font-weight: 500;
+}
+
+/* Elementor button styling
+--------------------------------------------- */
+.elementor-button:hover, .elementor-button:focus {
+  background-color: var(--color_primary-tint-2) !important;
 }
 
 /*--------------------------------------------------------------

@@ -4,6 +4,7 @@ Theme Name: Teratur
 WooCommerce styles override
 */
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap);
 :root {
   --color_black-tint-1: #121212;
   --color_black-tint-2: #242424;
@@ -80,6 +81,11 @@ WooCommerce styles override
   --color_analogous_l-tint-8: #b5c69d;
   --color_analogous_l-tint-9: #c2cfae;
   --color_analogous_l-tint-10: #ced9be;
+}
+
+:root {
+  --font_main-sans: "Poppins", "Helvetica Neue", sans-serif;
+  --font_main-serif: "EB Garamond", "Times", serif;
 }
 
 /*
