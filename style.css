@@ -566,31 +566,31 @@ body::before {
   z-index: -1000;
 }
 @media (max-width: 576px) {
-  body:not(.elementor-page) > *:not(#background-layer, #front-page-card) > *,
+  body:not(.elementor-page) > *:not(#background-layer, #front-page-img-container, #front-page-card) > *,
 body #primary.site-main {
     max-width: 315px;
   }
 }
 @media (min-width: 576px) {
-  body:not(.elementor-page) > *:not(#background-layer, #front-page-card) > *,
+  body:not(.elementor-page) > *:not(#background-layer, #front-page-img-container, #front-page-card) > *,
 body #primary.site-main {
     max-width: 450px;
   }
 }
 @media (min-width: 768px) {
-  body:not(.elementor-page) > *:not(#background-layer, #front-page-card) > *,
+  body:not(.elementor-page) > *:not(#background-layer, #front-page-img-container, #front-page-card) > *,
 body #primary.site-main {
     max-width: 650px;
   }
 }
 @media (min-width: 992px) {
-  body:not(.elementor-page) > *:not(#background-layer, #front-page-card) > *,
+  body:not(.elementor-page) > *:not(#background-layer, #front-page-img-container, #front-page-card) > *,
 body #primary.site-main {
     max-width: 850px;
   }
 }
 @media (min-width: 1200px) {
-  body:not(.elementor-page) > *:not(#background-layer, #front-page-card) > *,
+  body:not(.elementor-page) > *:not(#background-layer, #front-page-img-container, #front-page-card) > *,
 body #primary.site-main {
     max-width: 1100px;
   }
