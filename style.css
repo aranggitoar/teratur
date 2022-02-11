@@ -1627,6 +1627,12 @@ textarea {
 	}
 }
 
+/* Tutor course display widget
+--------------------------------------------- */
+.tutor-single-course-avatar a img {
+	max-width: 100px;
+}
+
 /* Stylesheet for Elementor
 --------------------------------------------- */
 
