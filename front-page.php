@@ -21,10 +21,10 @@ get_template_part( 'wp-load.php' );
 		</section>
 		<section>
 			<div>
-				<a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'TSI', OBJECT, 'bible-reader' ) ) ); ?>"><p>Alkitab dalam Terjemahan Sederhana</p><p>‣</p></a>
+				<a href="<?php echo esc_attr( 'https:bibledit.org:8083' ); ?>"><p>Alkitab Studi</p><p>‣</p></a>
 			</div>
 			<div>
-				<a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Bibledit' ) ) ); ?>"><p>Alat Penerjemahan Alkitab</p><p>‣</p></a>
+				<a href="<?php echo esc_attr( 'https://alkitabkita.info/wiki/petunjuk-penggunaan-bibledit/' ); ?>"><p>Petunjuk Penggunaan Bibledit</p><p>‣</p></a>
 			</div>
 			<div>
 				<a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Kursus Alkitab Kita' ) ) ); ?>"><p>Kursus Alkitab Kita</p><p>‣</p></a>

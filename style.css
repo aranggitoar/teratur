@@ -1528,6 +1528,15 @@ textarea {
 # Plugins
 --------------------------------------------------------------*/
 
+/* Stylesheet for BasePress
+--------------------------------------------- */
+
+/* Elementor main page styling
+--------------------------------------------- */
+.bpress-product .bpress-kb {
+	height: initial;
+}
+
 /* Jetpack infinite scroll
 --------------------------------------------- */
 

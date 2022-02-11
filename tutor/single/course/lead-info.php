@@ -15,9 +15,10 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 
 global $post, $authordata;
-$instructor_id = IP_Tutor_Public::get_current_course_instructor_post_id( get_the_ID() );
+$instructor = IP_Tutor_Public::get_ip_tutor_instructor_data( get_the_ID() );
+$instructor_id = $instructor['ID'];
 $profile_url = get_post( $instructor_id )->guid;
-$profile_name = IP_Tutor_Public::get_current_course_instructor_name( get_the_ID() );
+$profile_name = $instructor['name'];
 ?>
 
 <div class="tutor-single-course-segment tutor-single-course-lead-info">
