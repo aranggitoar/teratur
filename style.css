@@ -1531,7 +1531,13 @@ textarea {
 /* Stylesheet for BasePress
 --------------------------------------------- */
 
-/* Elementor main page styling
+/* BasePress global styling
+--------------------------------------------- */
+.bpress-wrap {
+	margin: 5em auto;
+}
+
+/* BasePress main page styling
 --------------------------------------------- */
 .bpress-product .bpress-kb {
 	height: initial;
@@ -1636,7 +1642,7 @@ textarea {
 /* Tutor page wrapper elements
 --------------------------------------------- */
 .tutor-page-wrap {
-	margin: 5em 0;
+	margin: 5em auto;
 }
 
 /* Stylesheet for Elementor
