@@ -59,7 +59,7 @@
 						);
 						?>
 					<?php
-					if ( get_post_type() === 'courses' || 'lesson' ) :
+					if ( is_user_logged_in () === false ) :
 						?>
 						<?php
 						wp_nav_menu(
