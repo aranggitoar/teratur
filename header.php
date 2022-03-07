@@ -60,12 +60,17 @@
 						?>
 					<?php
 					if ( is_user_logged_in () === false ) :
-						?>
-						<?php
 						wp_nav_menu(
 							array(
-								'theme_location' => 'special-menu',
-								'menu_id'        => 'special-menu',
+								'theme_location' => 'special-logged-out-menu',
+								'menu_id'        => 'special-logged-out-menu',
+							)
+						);
+          else :
+						wp_nav_menu(
+							array(
+								'theme_location' => 'special-logged-in-menu',
+								'menu_id'        => 'special-logged-in-menu',
 							)
 						);
 					endif;

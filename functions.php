@@ -54,7 +54,8 @@ if ( ! function_exists( 'teratur_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'special-menu'  => esc_html__( 'Special', 'teratur' ),
+				'special-logged-out-menu'  => esc_html__( 'Special Logged Out', 'teratur' ),
+				'special-logged-in-menu'  => esc_html__( 'Special Logged In', 'teratur' ),
 				'common-menu'   => esc_html__( 'Common', 'teratur' ),
 			)
 		);
