@@ -25,11 +25,10 @@ if ( ! is_front_page() ) {
 					<ul class="footer-links">
 						<li><a href="https://alkitabkita.info">Beranda</a></li>
 						<li><a href="https://alkitabkita.info/tentang-kami">Tentang Kami</a></li>
-						<li><a href="https://alkitabkita.info/alkitab/tsi">Baca TSI</a></li>
-						<li><a href="https://alkitabkita.info/petunjuk-penggunaan-bibledit">Petunjuk Penggunaan Bibledit</a></li>
-						<li><a href="https://alkitabkita.info/kursus">Kursus Alkitab Kita</a></li>
-						<li><a href="https://alkitabkita.info/artikel">Artikel</a></li>
-						<li><a href="https://alkitabkita.info/peta-situs">Peta Situs</a></li>
+						<li><a href="https://bibledit.org:8083">Alkitab Studi</a></li>
+						<li><a href="https://alkitabkita.info/wiki/petunjuk-penggunaan-bibledit">Petunjuk Penggunaan Bibledit</a></li>
+            <li><a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Kursus Alkitab Kita' ) ) ); ?>">Kursus Alkitab Kita</a></li>
+						<li><a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Artikel Alkitabiah' ) ) ); ?>">Artikel Alkitabiah</a></li>
 					</ul>
 				</div>
 			</div>
@@ -37,7 +36,7 @@ if ( ! is_front_page() ) {
 		<div class="container">
 			<div id="copyright-and-social">
 				<div>
-					<p>Hak Cipta &copy; 2021
+					<p>Hak Cipta &copy; 2022
 						<a href="https://albata.info">Yayasan Alkitab BahasaKita</a>
 					</p>
 				</div>
