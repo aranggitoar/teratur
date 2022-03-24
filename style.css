@@ -570,7 +570,6 @@ body {
 	align-items: center;
 	background: #fff !important;
 	color: var(--color_primary);
-	display: none;
 	height: calc(100 * var(--vh));
 	flex-direction: column;
 	font-weight: 300;
@@ -1350,6 +1349,7 @@ textarea {
 	color: var(--color_primary);
 	margin: 2.5em 0;
 	padding: 1em;
+	max-width: 900px;
 }
 
 .entry-title {
