@@ -238,7 +238,7 @@ function alkitabkita_deregister_scripts()
 		wp_dequeue_style( 'bible-reader' );
 	}
 
-	if ( ! ( ( get_post_type() === 'courses' ) || ( get_post_type() === 'lessons' ) || ( get_the_title() === 'Kursus Alkitab Kita' ) || ( get_the_title() === 'Daftar Kursus Alkitab Kita' ) ) ) {
+	if ( ! ( ( get_post_type() === 'courses' ) || ( get_post_type() === 'lessons' ) || ( get_post_type() === 'kursus' ) || ( get_post_type() === 'pelajaran' ) || ( get_the_title() === 'Kursus Alkitab Kita' ) || ( get_the_title() === 'Daftar Kursus Alkitab Kita' ) ) ) {
 		wp_deregister_style( 'tutor-frontend' );
 		wp_dequeue_style( 'tutor-frontend' );
 	}
