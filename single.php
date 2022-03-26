@@ -8,8 +8,6 @@
  */
 
 get_header();
-
-echo '<pre>' . print_r( get_post_type() ) . '</pre>';
 ?>
 
 	<main id="primary" class="site-main">
