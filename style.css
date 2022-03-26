@@ -1366,6 +1366,10 @@ aside .widget-area {
 	text-align: center;
 }
 
+article.post .entry-title {
+	display: block !important;
+}
+
 .sticky {
 	display: block;
 }
