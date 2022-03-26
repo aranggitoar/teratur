@@ -821,7 +821,7 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 .site {
-	display: grid;
+	display: grid !important;
 	grid-template-columns: auto 25%;
 	grid-template-areas: "header header" "main sidebar" "footer footer";
 }
