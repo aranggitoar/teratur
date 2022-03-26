@@ -836,6 +836,7 @@ textarea {
 	flex-direction: column;
 	height: fit-content;
 	justify-content: center;
+	margin-top: 5em;
 	padding: 1em;
 	position: relative;
 	width: 100%;
@@ -938,6 +939,7 @@ textarea {
 	flex-direction: column;
 	height: 6em;
 	justify-content: center;
+	margin-bottom: 5em;
 	position: relative;
 	width: 100%;
 }
@@ -1138,6 +1140,12 @@ textarea {
 .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
+}
+
+/* Sidebar
+--------------------------------------------- */
+aside .widget-area {
+	margin: 2em 0;
 }
 
 /* Front page
