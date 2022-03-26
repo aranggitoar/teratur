@@ -836,7 +836,7 @@ textarea {
 	flex-direction: column;
 	height: fit-content;
 	justify-content: center;
-	margin-top: 2em;
+	margin-top: 3em;
 	padding: 1em;
 	position: relative;
 	width: 100%;
@@ -939,7 +939,7 @@ textarea {
 	flex-direction: column;
 	height: 6em;
 	justify-content: center;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 	position: relative;
 	width: 100%;
 }
@@ -1376,12 +1376,6 @@ article.post .entry-title {
 
 .updated:not(.published) {
 	display: none;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
 }
 
 .page-links {
