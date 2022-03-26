@@ -499,7 +499,7 @@ optgroup,
 textarea {
 	color: #404040;
 	font-family: "Poppins", "Helvetica Neue", sans-serif;
-	font-size: 1.25em;
+	font-size: 1em;
 	line-height: 1.5;
 }
 
@@ -842,6 +842,35 @@ textarea {
 	width: 100%;
 }
 
+.site-footer .back-to-top {
+	align-items: center;
+	background-color: white;
+	border: var(--color_primary) 1px solid;
+	border-radius: 2.5px;
+	color: var(--color_primary);
+	cursor: pointer;
+	display: flex;
+	height: 25px;
+	justify-content: center;
+	transition: 250ms all;
+	width: 120px;
+}
+
+@media (min-width: 992px) {
+
+	.site-footer .back-to-top {
+		font-size: 14px;
+		height: 30px;
+		width: 150px;
+	}
+}
+
+.site-footer .back-to-top:hover {
+	background-color: var(--color_primary);
+	border: white 1px solid;
+	color: white;
+}
+
 .site-footer::after {
 	background-color: var(--color_primary);
 	border-top: 1px solid var(--color_black-tint-1);
@@ -872,14 +901,69 @@ textarea {
 }
 
 .site-footer .container #about-us {
-	display: flex;
+	display: grid;
+	grid-template-areas: "identity links" "btt btt";
+	margin: 3.5em 0;
 }
 
-.site-footer .container #about-us div {
+@media (max-width: 576px) {
+
+	.site-footer .container #about-us {
+		grid-template-areas: "identity" "links" "btt";
+	}
+}
+
+.site-footer .container #about-us > div:first-child {
+	display: flex;
+	flex-direction: column;
+	grid-area: identity;
+	justify-content: center;
+	padding-right: 5em;
+}
+
+@media (max-width: 576px) {
+
+	.site-footer .container #about-us > div:first-child {
+		margin-bottom: 2em;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.site-footer .container #about-us > div:first-child {
+		padding-right: initial;
+	}
+}
+
+.site-footer .container #about-us > div:first-child p {
+	font-size: 1.175em;
+	margin: initial;
+}
+
+.site-footer .container #about-us > div:nth-child(2) {
+	grid-area: links;
+}
+
+@media (max-width: 576px) {
+
+	.site-footer .container #about-us > div:nth-child(2) {
+		margin-bottom: 2em;
+	}
+}
+
+.site-footer .container #about-us > div:nth-child(3) {
+	align-items: center;
+	display: flex;
+	grid-area: btt;
+	justify-content: center;
+	margin-top: 2.5em;
+}
+
+.site-footer .container #about-us > div {
 	margin: 0 1em;
 }
 
-.site-footer .container #about-us div:last-child {
+.site-footer .container #about-us > div:last-child {
 	min-width: 30%;
 }
 
@@ -1368,6 +1452,10 @@ aside.widget-area {
 
 article.post .entry-title {
 	display: block !important;
+}
+
+.entry-content {
+	font-size: 1.15em;
 }
 
 .sticky {
