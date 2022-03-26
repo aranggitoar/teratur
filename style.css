@@ -836,7 +836,7 @@ textarea {
 	flex-direction: column;
 	height: fit-content;
 	justify-content: center;
-	margin-top: 5em;
+	margin-top: 2em;
 	padding: 1em;
 	position: relative;
 	width: 100%;
@@ -939,7 +939,7 @@ textarea {
 	flex-direction: column;
 	height: 6em;
 	justify-content: center;
-	margin-bottom: 5em;
+	margin-bottom: 2em;
 	position: relative;
 	width: 100%;
 }
@@ -1144,7 +1144,7 @@ textarea {
 
 /* Sidebar
 --------------------------------------------- */
-aside .widget-area {
+aside.widget-area {
 	margin: 2em 0;
 }
 
@@ -1392,7 +1392,7 @@ article.post .entry-title {
 @media (orientation: landscape) {
 
 	#primary.site-main {
-		margin: 5em 0;
+		margin: 2em 0;
 	}
 }
 
