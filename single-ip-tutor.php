@@ -1,13 +1,15 @@
 <?php
 
 /**
- * TODO: Add course count and student count feature.
+ * Template Name: Default template
+ * Template Post Type: ip-tutor
  *
  * Template for displaying IP Tutor for Tutor LMS' instructor Public Profile.
  *
  * @since           0.4.0
  * @package					IP_Tutor
  * @author					Aranggi Toar <aranggi.josef@gmail.com>
+ * TODO: Add course count and student count feature.
  */
 
 $instructor = IP_Tutor_Public::get_ip_tutor_instructor_data ( get_the_ID() );
