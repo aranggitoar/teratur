@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.43' );
+	define( 'TERATUR_VERSION', '1.1.44' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -169,6 +169,10 @@ function teratur_scripts() {
 	if ( is_front_page() ) {
 		wp_enqueue_script( 'teratur-front-page', get_template_directory_uri() . '/js/front-page.js', array(), TERATUR_VERSION, true );
 	}
+
+  if ( get_the_title() === 'Kursus Alkitab Kita' ) {
+		wp_enqueue_script( 'teratur-course-landing-page', get_template_directory_uri() . '/js/course-landing-page.js', array(), TERATUR_VERSION, true );
+  }
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
