@@ -36,7 +36,7 @@ get_template_part( 'wp-load.php' );
 	</div>
 
 	<div id="front-page-img-container">
-		<img src="<?php echo esc_html( get_template_directory_uri() ); ?>/assets/woman-reading-bible-in-the-afternoon.JPG">
+		<img src="<?php echo esc_html( get_template_directory_uri() ); ?>/assets/woman-opening-bibledit-in-her-living-room-2.jpg">
 	</div>
 
 <?php
