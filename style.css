@@ -1710,6 +1710,10 @@ article.post .entry-title {
 	max-width: initial !important;
 }
 
+.tutor-dashboard-menu-item-icon {
+	min-width: 30px !important;
+}
+
 /* Tutor course display widget
 --------------------------------------------- */
 .tutor-single-course-avatar a img {
