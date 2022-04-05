@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.46' );
+	define( 'TERATUR_VERSION', '1.1.47' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -276,3 +276,16 @@ function replace_all_title_separator($sep)
 }
 
 add_filter( 'document_title_separator', 'replace_all_title_separator' );
+
+/**
+ * Remove a couple of TutorLMS Dashboard items.
+ */
+add_filter('tutor_dashboard/nav_items', 'remove_some_links_dashboard');
+function remove_links_from_tutor_dashboard($links)
+{
+	unset($links['index']);
+  unset($links['wishlist']);
+	unset($links['reviews']);
+  unset($links['purchase_history']);
+	return $links;
+}
