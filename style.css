@@ -1699,15 +1699,15 @@ article.post .entry-title {
 /* Tutor dashboard page
 --------------------------------------------- */
 .tutor-frontend-dashboard {
-	overflow: unset;
+	overflow: unset !important;
 }
 
 .tutor-dashboard-permalinks {
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 #tutor-dashboard-footer-mobile {
-	max-width: initial;
+	max-width: initial !important;
 }
 
 /* Tutor course display widget
