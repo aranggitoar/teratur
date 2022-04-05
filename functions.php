@@ -310,8 +310,8 @@ $currenturl_relative = wp_make_link_relative($currenturl);
 
 switch ( $currenturl_relative ) {
 
-  case '/dashboard':
-  $urlto = home_url('/dashboard/enrolled-courses');
+  case '/dashboard/':
+  $urlto = home_url('/dashboard/enrolled-courses/');
   break;
 
   default:
