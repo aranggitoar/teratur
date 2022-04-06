@@ -1703,6 +1703,7 @@ article.post .entry-title {
 	--tutor-primary-main: #4a7e4c;
 	--tutor-primary-color: #4a7e4c;
 	--tutor-primary-hover: #375d39;
+	--tutor-primary-hover-color: #375d39;
 	--tutor-primary-dark: #222;
 	--tutor-primary-light: #fff;
 }
