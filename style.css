@@ -1696,6 +1696,16 @@ article.post .entry-title {
 	}
 }
 
+/* Tutor color override
+--------------------------------------------- */
+:root {
+	--tutor-primary: #4a7e4c;
+	--tutor-primary-main: #4a7e4c;
+	--tutor-primary-hover: #375d39;
+	--tutor-primary-dark: #222;
+	--tutor-primary-light: #fff;
+}
+
 /* Tutor dashboard page
 --------------------------------------------- */
 .tutor-frontend-dashboard {
