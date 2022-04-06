@@ -1726,6 +1726,14 @@ article.post .entry-title {
 	min-width: 30px !important;
 }
 
+.tutor_cover_uploader {
+	background: var(--tutor-primary-color);
+}
+
+.tutor_cover_uploader :hover {
+	background: var(--tutor-primary-hover-color);
+}
+
 /* Tutor course display widget
 --------------------------------------------- */
 .tutor-single-course-avatar a img {
