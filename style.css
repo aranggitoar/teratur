@@ -1726,12 +1726,12 @@ article.post .entry-title {
 	min-width: 30px !important;
 }
 
-.tutor_cover_uploader {
-	background: var(--tutor-primary-color);
+.tutor-dashboard .tutor-dashboard-content #tutor_profile_cover_photo_editor #tutor_cover_area .tutor_cover_uploader {
+	background: var(--tutor-primary-color) !important;
 }
 
-.tutor_cover_uploader :hover {
-	background: var(--tutor-primary-hover-color);
+.tutor-dashboard .tutor-dashboard-content #tutor_profile_cover_photo_editor #tutor_cover_area .tutor_cover_uploader :hover {
+	background: var(--tutor-primary-hover-color) !important;
 }
 
 /* Tutor course display widget
