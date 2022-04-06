@@ -1730,7 +1730,7 @@ article.post .entry-title {
 	background: var(--tutor-primary-color) !important;
 }
 
-.tutor-dashboard .tutor-dashboard-content #tutor_profile_cover_photo_editor #tutor_cover_area .tutor_cover_uploader :hover {
+.tutor-dashboard .tutor-dashboard-content #tutor_profile_cover_photo_editor #tutor_cover_area .tutor_cover_uploader:hover {
 	background: var(--tutor-primary-hover-color) !important;
 }
 
