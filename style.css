@@ -1746,6 +1746,10 @@ article.post .entry-title {
 	margin: 5em auto;
 }
 
+.tutor-page-wrap .tutor-course-single-content-wraper #tutor-single-entry-content {
+	height: 100vh;
+}
+
 .tutor-wrap {
 	margin: 5em auto;
 }
@@ -1776,6 +1780,99 @@ body.elementor-page {
 .elementor-button:focus {
 	background-color: transparent;
 	background-image: linear-gradient(250deg, var(--e-global-color-accent) 0%, var(--e-global-color-primary) 100%);
+}
+
+/* Stylesheet for Essential Addons for Elementor
+--------------------------------------------- */
+
+/* EAEL Login Register element
+--------------------------------------------- */
+.eael-lr-form-wrapper .eael-lr-form-group {
+	margin: 0.75em;
+}
+
+.eael-lr-form-wrapper .eael-lr-form-group .eael-field-label {
+	display: none;
+}
+
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .eael-lr-password-wrapper {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+}
+
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .eael-lr-password-wrapper #wp-hide-pw {
+	align-items: center;
+	display: flex;
+	height: 28.5px;
+	margin-left: 0.5em;
+}
+
+.eael-lr-form-wrapper #eael-register-form {
+	display: grid;
+	grid-template-areas: "user email" "password confirm_password";
+}
+
+.eael-lr-form-wrapper #eael-register-form .eael-lr-form-control {
+	width: clamp(101px, 10vw, 202px);
+}
+
+.eael-lr-form-wrapper #eael-register-form .eael-field-type-user_name {
+	grid-area: user;
+	margin-left: 0;
+}
+
+.eael-lr-form-wrapper #eael-register-form .eael-field-type-email {
+	grid-area: email;
+	margin-right: 0;
+}
+
+.eael-lr-form-wrapper #eael-register-form .eael-field-type-password {
+	grid-area: password;
+	margin-left: 0;
+}
+
+.eael-lr-form-wrapper #eael-register-form .eael-field-type-confirm_password {
+	align-items: flex-end;
+	display: flex;
+	grid-area: confirm_password;
+	margin-right: 0;
+}
+
+.eael-lr-form-wrapper .eael-lr-footer {
+	margin-top: 1em;
+}
+
+.eael-lr-form-wrapper .eael-lr-footer .eael-sign-wrapper {
+	display: none !important;
+}
+
+#eael-login-form-wrapper {
+	display: none;
+}
+
+/* EAEL Modifications
+--------------------------------------------- */
+#login-registration-form-switcher-wrapper {
+	color: #000;
+	font-size: 1.25em;
+	margin-bottom: 1.25em;
+}
+
+#login-registration-form-switcher-wrapper #login-form-switcher {
+	margin-right: 0.5em;
+	opacity: 0.6;
+}
+
+#login-registration-form-switcher-wrapper #registration-form-switcher {
+	border-bottom: 1px solid black;
+	margin-left: 0.5em;
+	opacity: 1;
 }
 
 /*--------------------------------------------------------------
