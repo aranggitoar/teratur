@@ -1746,8 +1746,8 @@ article.post .entry-title {
 	margin: 5em auto;
 }
 
-.tutor-page-wrap .tutor-course-single-content-wraper #tutor-single-entry-content {
-	height: 100vh;
+#tutor-page-wrap .tutor-course-single-content-wraper #tutor-single-entry-content {
+	height: 100vh !important;
 }
 
 .tutor-wrap {
