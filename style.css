@@ -1755,7 +1755,7 @@ article.post .entry-title {
 }
 
 #tutor-page-wrap .tutor-course-single-content-wraper .tutor-course-single-sidebar-wraper .tutor-sidebar-tabs-wrap .tutor-sidebar-tabs-content {
-	height: 100%;
+	height: calc(100% - 60px);
 }
 
 .tutor-wrap {
