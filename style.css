@@ -576,14 +576,7 @@ body {
 	min-height: calc(100 * var(--vh));
 }
 
-body::before {
-	height: 100%;
-	position: fixed;
-	width: 100%;
-	z-index: -1000;
-}
-
-body > *:not(#background-layer, #front-page-img-container, #front-page-card) > *:not(article.page) {
+body:not(.page-template-elementor_canvas) > *:not(#background-layer, #front-page-img-container, #front-page-card) > *:not(article.page) {
 	max-width: 70vw;
 }
 
