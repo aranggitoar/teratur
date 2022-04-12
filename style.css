@@ -576,7 +576,11 @@ body {
 	min-height: calc(100 * var(--vh));
 }
 
-body:not(.page-template-elementor_canvas) > *:not(#background-layer, #front-page-img-container, #front-page-card) > *:not(article.page) {
+body:not(.page-template-elementor_canvas) {
+	max-width: initial !important;
+}
+
+body > *:not(#background-layer, #front-page-img-container, #front-page-card) > *:not(article.page) {
 	max-width: 70vw;
 }
 
