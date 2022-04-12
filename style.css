@@ -576,7 +576,7 @@ body {
 	min-height: calc(100 * var(--vh));
 }
 
-body:not(.page-template-elementor_canvas) > *:not(#background-layer, #front-page-img-container, #front-page-card) > *:not(article.page) {
+body > *:not(#background-layer, #front-page-img-container, #front-page-card) > *:not(article.page) {
 	max-width: 70vw;
 }
 
@@ -1773,6 +1773,11 @@ body.elementor-page {
 	--e-global-typography-text-font-weight: 300;
 	--e-global-typography-accent-font-family: "Poppins";
 	--e-global-typography-accent-font-weight: 600;
+}
+
+body.page-template-elementor_canvas div section {
+	max-width: initial !important;
+	left: initial !important;
 }
 
 /* Elementor button styling
