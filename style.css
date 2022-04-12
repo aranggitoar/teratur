@@ -1830,22 +1830,22 @@ body.page-template-elementor_canvas div.elementor section {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-.eael-lr-form-wrapper #eael-register-form .eael-field-type-user_name {
+.eael-lr-form-wrapper #eael-register-form .eael-lr-form-control #form-field-user_name {
 	grid-area: user;
 	margin-left: 0;
 }
 
-.eael-lr-form-wrapper #eael-register-form .eael-field-type-email {
+.eael-lr-form-wrapper #eael-register-form .eael-lr-form-control #form-field-email {
 	grid-area: email;
 	margin-right: 0;
 }
 
-.eael-lr-form-wrapper #eael-register-form .eael-field-type-password {
+.eael-lr-form-wrapper #eael-register-form .eael-lr-form-control #form-field--password {
 	grid-area: password;
 	margin-left: 0;
 }
 
-.eael-lr-form-wrapper #eael-register-form .eael-field-type-confirm_password {
+.eael-lr-form-wrapper #eael-register-form .eael-lr-form-control #form-field-confirm_password {
 	align-items: flex-end;
 	display: flex;
 	grid-area: confirm_password;
