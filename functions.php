@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.416' );
+	define( 'TERATUR_VERSION', '1.1.417' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -170,7 +170,7 @@ function teratur_scripts() {
 		wp_enqueue_script( 'teratur-front-page', get_template_directory_uri() . '/js/front-page.js', array(), TERATUR_VERSION, true );
 	}
 
-  if ( the_title() === 'Kursus Alkitab Kita' ) {
+  if ( get_the_title() === 'Kursus Alkitab Kita' ) {
 		wp_enqueue_script( 'teratur-course-landing-page', get_template_directory_uri() . '/js/course-landing-page.js', array(), TERATUR_VERSION, true );
   }
 
