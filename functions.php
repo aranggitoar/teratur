@@ -170,7 +170,7 @@ function teratur_scripts() {
 		wp_enqueue_script( 'teratur-front-page', get_template_directory_uri() . '/js/front-page.js', array(), TERATUR_VERSION, true );
 	}
 
-  if ( get_the_title() === 'Kursus Alkitab Kita' ) {
+  if ( the_title() === 'Kursus Alkitab Kita' ) {
 		wp_enqueue_script( 'teratur-course-landing-page', get_template_directory_uri() . '/js/course-landing-page.js', array(), TERATUR_VERSION, true );
   }
 
