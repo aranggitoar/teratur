@@ -2,8 +2,12 @@ const eaelLoginRegistrationWrapper =
     document.querySelector('.eael-login-registration-wrapper'),
   eaelLoginForm =
     document.querySelector('#eael-login-form-wrapper'),
+  eaelLoginFormInnerWrapper =
+    document.querySelector('.eael-login-form-wrapper'),
   eaelRegisterForm =
     document.querySelector('#eael-register-form-wrapper'),
+  eaelRegisterFormInnerWrapper =
+    document.querySelector('.eael-register-form-wrapper'),
   eaelRegisterFormPasswordConfirmation =
     document.querySelector('#form-field-confirm_pass'),
   eaelRegisterFormSubmitButton =
@@ -14,8 +18,8 @@ const eaelLoginRegistrationWrapper =
         <span id="registration-form-switcher" onclick="switchToRegistrationForm()">Daftar</span>
       </div>`;
 
-eaelRegisterForm.insertAdjacentHTML( 'afterbegin', switcherMarkup );
-eaelLoginForm.insertAdjacentHTML( 'afterbegin', switcherMarkup );
+eaelRegisterFormInnerWrapper.insertAdjacentHTML( 'afterbegin', switcherMarkup );
+eaelLoginFormInnerWrapper.insertAdjacentHTML( 'afterbegin', switcherMarkup );
 
 
 eaelRegisterFormPasswordConfirmation.placeholder = 'Konfirmasi Kata Sandi';
