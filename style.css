@@ -1850,6 +1850,7 @@ body.page-template-elementor_canvas div.elementor section {
 
 .eael-lr-form-wrapper #eael-register-form .eael-lr-form-group input {
 	margin: 0.75em;
+	width: 95% !important;
 }
 
 .eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-user_name {
