@@ -14,8 +14,8 @@ const eaelLoginRegistrationWrapper =
         <span id="registration-form-switcher" onclick="switchToRegistrationForm()">Daftar</span>
       </div>`;
 
-eaelLoginRegistrationWrapper.insertAdjacentHTML( 'afterbegin',
-  switcherMarkup );
+eaelRegisterForm.insertAdjacentHTML( 'afterbegin', switcherMarkup );
+eaelLoginForm.insertAdjacentHTML( 'afterbegin', switcherMarkup );
 
 
 eaelRegisterFormPasswordConfirmation.placeholder = 'Konfirmasi Kata Sandi';
