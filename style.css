@@ -1812,13 +1812,13 @@ body.page-template-elementor_canvas div.elementor section {
 	line-height: initial !important;
 }
 
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group a.forget-pass {
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a {
 	color: #517152 !important;
 }
 
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group a.forget-pass:hover,
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group a.forget-pass:active,
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group a.forget-pass:focus {
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a:hover,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a:active,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a:focus {
 	color: #375d39 !important;
 }
 
