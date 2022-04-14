@@ -1816,6 +1816,11 @@ body.page-template-elementor_canvas div.elementor section {
 	line-height: initial !important;
 }
 
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group #eael-user-password,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group #eael-user-login {
+	margin: 0.75em 0;
+}
+
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a,
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass label,
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot a,
