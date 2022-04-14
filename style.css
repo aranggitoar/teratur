@@ -1812,13 +1812,13 @@ body.page-template-elementor_canvas div.elementor section {
 	line-height: initial !important;
 }
 
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass {
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group a.forget-pass {
 	color: #517152 !important;
 }
 
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass:hover,
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass:active,
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass:focus {
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group a.forget-pass:hover,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group a.forget-pass:active,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group a.forget-pass:focus {
 	color: #375d39 !important;
 }
 
@@ -1892,13 +1892,13 @@ body.page-template-elementor_canvas div.elementor section {
 }
 
 #login-registration-form-switcher-wrapper #login-form-switcher {
-	margin-left: 0.5em;
+	margin-left: 0.4em;
 	opacity: 0.6;
 }
 
 #login-registration-form-switcher-wrapper #registration-form-switcher {
 	border-bottom: 1px solid black;
-	margin-right: 0.5em;
+	margin-right: 0.4em;
 	opacity: 1;
 }
 
