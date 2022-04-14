@@ -3,11 +3,11 @@ const eaelLoginRegistrationWrapper =
   eaelLoginForm =
     document.querySelector('#eael-login-form-wrapper'),
   eaelLoginFormInnerWrapper =
-    document.querySelector('.eael-login-form-wrapper'),
+    document.querySelector('.eael-login-form-wrapper > .lr-form-wrapper'),
   eaelRegisterForm =
     document.querySelector('#eael-register-form-wrapper'),
   eaelRegisterFormInnerWrapper =
-    document.querySelector('.eael-register-form-wrapper'),
+    document.querySelector('.eael-register-form-wrapper > .lr-form-wrapper'),
   eaelRegisterFormPasswordConfirmation =
     document.querySelector('#form-field-confirm_pass'),
   eaelRegisterFormSubmitButton =
