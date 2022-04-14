@@ -1812,13 +1812,25 @@ body.page-template-elementor_canvas div.elementor section {
 	line-height: initial !important;
 }
 
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a {
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass label,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot a,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot label {
 	color: #517152 !important;
 }
 
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a:hover,
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a:active,
-.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a:focus {
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a:focus,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass label:hover,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass label:active,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass label:focus,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot a:hover,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot a:active,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot a:focus,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot label:hover,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot label:active,
+.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot label:focus {
 	color: #375d39 !important;
 }
 
