@@ -1825,6 +1825,7 @@ body.page-template-elementor_canvas div.elementor section {
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass label,
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot a,
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-menot label {
+	font-size: 14px;
 	color: #517152 !important;
 }
 
