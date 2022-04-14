@@ -14,8 +14,8 @@ const eaelLoginRegistrationWrapper =
     document.querySelector('#eael-register-submit'),
   switcherMarkup = `
       <div id="login-registration-form-switcher-wrapper">
-        <span id="login-form-switcher" onclick="switchToLoginForm()">Masuk</span>
         <span id="registration-form-switcher" onclick="switchToRegistrationForm()">Daftar</span>
+        <span id="login-form-switcher" onclick="switchToLoginForm()">Masuk</span>
       </div>`;
 
 eaelRegisterFormInnerWrapper.insertAdjacentHTML( 'afterbegin', switcherMarkup );
