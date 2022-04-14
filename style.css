@@ -1809,10 +1809,7 @@ body.page-template-elementor_canvas div.elementor section {
 }
 
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .eael-lr-password-wrapper #wp-hide-pw {
-	align-items: center;
-	display: flex;
-	height: 28.5px;
-	margin-left: 0.5em;
+	line-height: initial !important;
 }
 
 .eael-lr-form-wrapper #eael-register-form {
