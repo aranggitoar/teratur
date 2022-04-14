@@ -1780,6 +1780,10 @@ body.page-template-elementor_canvas div.elementor section {
 	left: initial !important;
 }
 
+.elementor-column-gap-default > .elementor-column > .elementor-element-populated {
+	padding: initial;
+}
+
 /* Elementor button styling
 --------------------------------------------- */
 .elementor-button:hover,
