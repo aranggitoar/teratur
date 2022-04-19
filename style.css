@@ -576,7 +576,7 @@ body {
 	min-height: calc(100 * var(--vh));
 }
 
-body > *:not(#background-layer, #front-page-img-container, #front-page-card) > *:not(article.page) {
+body > *:not(#background-layer, #front-page-img-container, #front-page-card, .elementor-location-archive) > *:not(article.page) {
 	max-width: 70vw;
 }
 
