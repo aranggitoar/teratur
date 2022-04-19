@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.49' );
+	define( 'TERATUR_VERSION', '1.1.5' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
