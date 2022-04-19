@@ -174,6 +174,10 @@ function teratur_scripts() {
 		wp_enqueue_script( 'teratur-course-landing-page', get_template_directory_uri() . '/js/course-landing-page.js', array(), TERATUR_VERSION, true );
   }
 
+  if ( is_search() ) {
+		wp_enqueue_script( 'teratur-search-result-page', get_template_directory_uri() . '/js/search-result-page.js', array(), TERATUR_VERSION, true );
+  }
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -325,3 +329,5 @@ exit( wp_redirect( $urlto ) );
 
 }
 add_action( 'template_redirect', 'page_redirection' );
+
+echo esc_html( get_the_title() );
