@@ -902,6 +902,13 @@ textarea {
 	margin: initial;
 }
 
+.site-footer .container #about-us > div:first-child div {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .site-footer .container #about-us > div:nth-child(2) {
 	grid-area: links;
 }

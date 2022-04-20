@@ -24,15 +24,23 @@ if ( ! is_front_page() ) {
             </g>
           </svg>
 					<p>Alkitab Kita memperlengkapi Anda memahami Firman Allah — seperti penerjemah Alkitab.</p>
+          <div>
+            <div>
+              <a href="https://karunia.or.id/"><img src="<?php echo esc_html( get_template_directory_uri() ); ?>/assets/dwi-pranata-atmaja.png"></a>
+            </div>
+            <div>
+              <a href="https://benihyangbaik.com/"><img src="<?php echo esc_html( get_template_directory_uri() ); ?>/assets/byb.png"></a>
+            </div>
+          </div>
 				</div>
 
 				<div>
 					<h5>Tautan-tautan Penting</h5>
 					<ul class="footer-links">
-						<li><a href="https://bibledit.org:8083">Alkitab Studi</a></li>
-						<li><a href="https://alkitabkita.info/wiki/petunjuk-penggunaan-bibledit">Petunjuk Penggunaan Bibledit</a></li>
-            <li><a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Kursus Alkitab Kita' ) ) ); ?>">Kursus Alkitab Kita</a></li>
-						<li><a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Artikel Alkitabiah' ) ) ); ?>">Artikel Alkitabiah</a></li>
+            <li><a href="<?php echo esc_attr( 'https://bibledit.org:8083' ); ?>">Alkitab Studi</a></li>
+            <li><a href="<?php echo esc_attr( 'https://alkitabkita.info/wiki/petunjuk-penggunaan-bibledit' ); ?>">Petunjuk Penggunaan Bibledit</a></li>
+            <li><a href="<?php echo ( !( is_user_logged_in() ) ) ? esc_attr( get_permalink( get_page_by_title( 'Kursus Alkitab Kita' ) ) ) : esc_attr( get_permalink( get_page_by_title( 'Daftar Kursus' ) ) ); ?>">Kursus Alkitab Kita</a></li>
+            <li><a href="<?php echo esc_attr( get_permalink( get_page_by_title( 'Artikel Alkitabiah' ) ) ); ?>">Artikel Alkitabiah</a></li>
 					</ul>
 				</div>
         <div>
