@@ -902,7 +902,7 @@ textarea {
 	margin: initial;
 }
 
-.site-footer .container #about-us > div:first-child div {
+.site-footer .container #about-us > div:first-child > div {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
