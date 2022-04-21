@@ -1936,36 +1936,19 @@ body.page-template-elementor_canvas div.elementor section {
 	margin-top: 1em;
 }
 
+@media (max-width: 576px) {
+
+	.eael-lr-form-wrapper .eael-lr-footer {
+		justify-content: center;
+	}
+}
+
 .eael-lr-form-wrapper .eael-lr-footer .eael-sign-wrapper {
 	display: none !important;
 }
 
 #eael-login-form-wrapper {
 	display: none;
-}
-
-@media (orientation: landscape) {
-
-	.eael-lr-form-wrapper #eael-register-form {
-		display: flex !important;
-		flex-direction: column !important;
-	}
-
-	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-user_name {
-		margin: 0 !important;
-	}
-
-	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-email {
-		margin: 0 !important;
-	}
-
-	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-password {
-		margin: 0 !important;
-	}
-
-	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-confirm_pass {
-		margin: 0 !important;
-	}
 }
 
 /* EAEL Modifications
