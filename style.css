@@ -1939,7 +1939,7 @@ body.page-template-elementor_canvas div.elementor section {
 @media (max-width: 576px) {
 
 	.eael-lr-form-wrapper .eael-lr-footer {
-		justify-content: center;
+		justify-content: center !important;
 	}
 }
 
