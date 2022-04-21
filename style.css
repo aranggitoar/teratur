@@ -1837,6 +1837,7 @@ body.page-template-elementor_canvas div.elementor section {
 
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .eael-lr-password-wrapper #wp-hide-pw {
 	line-height: initial !important;
+	padding: 0 !important;
 }
 
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group #eael-user-password,
