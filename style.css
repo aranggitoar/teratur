@@ -1921,6 +1921,30 @@ body.page-template-elementor_canvas div.elementor section {
 	display: none;
 }
 
+@media (orientation: landscape) {
+
+	.eael-lr-form-wrapper #eael-register-form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-user_name {
+		margin: 0 !important;
+	}
+
+	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-email {
+		margin: 0 !important;
+	}
+
+	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-password {
+		margin: 0 !important;
+	}
+
+	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-confirm_pass {
+		margin: 0 !important;
+	}
+}
+
 /* EAEL Modifications
 --------------------------------------------- */
 #login-registration-form-switcher-wrapper {
