@@ -1908,7 +1908,7 @@ body.page-template-elementor_canvas div.elementor section {
 @media (max-width: 576px) {
 
 	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-user_name {
-		margin: 0 !important;
+		margin: 0 0 0.75em !important;
 	}
 }
 
@@ -1919,7 +1919,7 @@ body.page-template-elementor_canvas div.elementor section {
 @media (max-width: 576px) {
 
 	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-email {
-		margin: 0 !important;
+		margin: 0 0 0.75em !important;
 	}
 }
 
@@ -1930,7 +1930,7 @@ body.page-template-elementor_canvas div.elementor section {
 @media (max-width: 576px) {
 
 	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-password {
-		margin: 0 !important;
+		margin: 0 0 0.75em !important;
 	}
 }
 
