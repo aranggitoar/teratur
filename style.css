@@ -1822,6 +1822,13 @@ body.page-template-elementor_canvas div.elementor section {
 	margin: 0.75em 0;
 }
 
+@media (max-width: 576px) {
+
+	.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group {
+		margin: 0;
+	}
+}
+
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .eael-lr-password-wrapper {
 	align-items: center;
 	display: flex;
@@ -1835,6 +1842,21 @@ body.page-template-elementor_canvas div.elementor section {
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group #eael-user-password,
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group #eael-user-login {
 	margin: 0.75em 0;
+}
+
+@media (max-width: 576px) {
+
+	.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group #eael-user-password,
+	.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group #eael-user-login {
+		margin: 0;
+	}
+}
+
+@media (max-width: 576px) {
+
+	.eael-lr-form-wrapper #eael-login-form .eael-lr-form-group #eael-user-login {
+		margin-bottom: 0.75em;
+	}
 }
 
 .eael-lr-form-wrapper #eael-login-form .eael-lr-form-group .forget-pass a,
