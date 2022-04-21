@@ -1901,37 +1901,24 @@ body.page-template-elementor_canvas div.elementor section {
 	width: 95% !important;
 }
 
-.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-user_name {
-	margin-left: 0;
-}
-
 @media (max-width: 576px) {
 
-	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-user_name {
-		margin: 0 0 0.75em !important;
+	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group input {
+		margin: 0 0 0.75em;
+		width: 100% !important;
 	}
+}
+
+.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-user_name {
+	margin-left: 0;
 }
 
 .eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-email {
 	margin-right: 0;
 }
 
-@media (max-width: 576px) {
-
-	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-email {
-		margin: 0 0 0.75em !important;
-	}
-}
-
 .eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-password {
 	margin-left: 0;
-}
-
-@media (max-width: 576px) {
-
-	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-password {
-		margin: 0 0 0.75em !important;
-	}
 }
 
 .eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-confirm_pass {
@@ -1941,7 +1928,7 @@ body.page-template-elementor_canvas div.elementor section {
 @media (max-width: 576px) {
 
 	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-confirm_pass {
-		margin: 0 !important;
+		margin-bottom: 0;
 	}
 }
 
