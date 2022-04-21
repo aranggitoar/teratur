@@ -1924,8 +1924,8 @@ body.page-template-elementor_canvas div.elementor section {
 @media (orientation: landscape) {
 
 	.eael-lr-form-wrapper #eael-register-form {
-		display: flex;
-		flex-direction: column;
+		display: flex !important;
+		flex-direction: column !important;
 	}
 
 	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-user_name {
