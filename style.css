@@ -1866,6 +1866,14 @@ body.page-template-elementor_canvas div.elementor section {
 	grid-template-columns: repeat(2, 1fr);
 }
 
+@media (max-width: 576px) {
+
+	.eael-lr-form-wrapper #eael-register-form {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+}
+
 .eael-lr-form-wrapper #eael-register-form .eael-field-type-user_name {
 	grid-area: user;
 }
@@ -1897,16 +1905,44 @@ body.page-template-elementor_canvas div.elementor section {
 	margin-left: 0;
 }
 
+@media (max-width: 576px) {
+
+	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-user_name {
+		margin: 0 !important;
+	}
+}
+
 .eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-email {
 	margin-right: 0;
+}
+
+@media (max-width: 576px) {
+
+	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-email {
+		margin: 0 !important;
+	}
 }
 
 .eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-password {
 	margin-left: 0;
 }
 
+@media (max-width: 576px) {
+
+	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-password {
+		margin: 0 !important;
+	}
+}
+
 .eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-confirm_pass {
 	margin-right: 0;
+}
+
+@media (max-width: 576px) {
+
+	.eael-lr-form-wrapper #eael-register-form .eael-lr-form-group #form-field-confirm_pass {
+		margin: 0 !important;
+	}
 }
 
 .eael-lr-form-wrapper .eael-lr-footer {
