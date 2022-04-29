@@ -331,3 +331,14 @@ exit( wp_redirect( $urlto ) );
 add_action( 'template_redirect', 'page_redirection' );
 
 echo esc_html( get_the_title() );
+
+/**
+ * Limit, change number of posts in archive pages
+ */
+add_filter( 'pre_get_posts', 'posts_archive_limit_change' );
+function posts_archive_limit_change($query){
+    if ( $query->is_archive || $query->is_category ) {
+        $query->set('posts_per_page', 6);
+    }
+    return $query;
+}
