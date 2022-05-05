@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.61' );
+	define( 'TERATUR_VERSION', '1.1.62' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -359,10 +359,10 @@ function account_activation_subject( $text ) {
 }
 
 add_filter('wpmu_signup_user_notification_email', 'account_activation_message', 10, 4);
-function account_activation_message($message, $user, $user_email, $key) {
+function account_activation_message($message, $user, $user_email, $key, $meta) {
   $message = sprintf(__(( "Salam!
     Untuk mengaktifkan akun Anda, silahkan klik tautan berikut:\n\n%s\n\n Setelah Anda mengaktifkannya Anda dapat masuk.\n\n" ),
-  $user, $user_email, $key),site_url( "?page=gf_activation&key=$key" ));
+  $user, $user_email, $key, $meta),site_url( "?page=gf_activation&key=$key" ));
 
   return sprintf($message);
 }
