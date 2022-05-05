@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.6' );
+	define( 'TERATUR_VERSION', '1.1.61' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -299,38 +299,33 @@ add_filter('tutor_dashboard/nav_items', 'remove_links_from_tutor_dashboard');
  */
 function page_redirection() {
 
-if ( isset( $_SERVER['HTTPS'] ) &&
-( $_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1 ) ||
-isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) &&
-$_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
-  $protocol = 'https://';
-}
-else {
-  $protocol = 'http://';
-}
+  if ( isset( $_SERVER['HTTPS'] ) &&
+    ( $_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1 ) ||
+    isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) &&
+    $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
+      $protocol = 'https://';
+  }
+  else {
+    $protocol = 'http://';
+  }
 
-$currenturl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-$currenturl_relative = wp_make_link_relative($currenturl);
+  $currenturl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+  $currenturl_relative = wp_make_link_relative($currenturl);
 
-switch ( $currenturl_relative ) {
+  switch ( $currenturl_relative ) {
+    case '/dashboard/':
+    $urlto = home_url('/dashboard/enrolled-courses/');
+    break;
 
-  case '/dashboard/':
-  $urlto = home_url('/dashboard/enrolled-courses/');
-  break;
+    default:
+    return;
+  }
 
-  default:
-  return;
-
-}
-
-if ( $currenturl != $urlto )
-exit( wp_redirect( $urlto ) );
-
+  if ( $currenturl != $urlto )
+  exit( wp_redirect( $urlto ) );
 
 }
 add_action( 'template_redirect', 'page_redirection' );
-
-echo esc_html( get_the_title() );
 
 /**
  * Limit, change number of posts in archive pages
@@ -345,8 +340,19 @@ function posts_archive_limit_change($query){
 
 
 /**
- * Ganti teks subyek dan isi email pendaftaran
+ * Ganti email pengirim, nama pengirim, teks subyek, dan isi email
+ * pendaftaran.
  */
+add_filter('wp_mail_from', 'sender_email');
+function sender_email($old) {
+  return 'admin@alkitabkita.info';
+}
+
+add_filter('wp_mail_from_name', 'sender_name');
+function sender_name($old) {
+  return 'Alkitab Kita';
+}
+
 add_filter( 'wpmu_signup_user_notification_subject', 'account_activation_subject', 10, 4 );
 function account_activation_subject( $text ) {
   return 'Anda telah terdaftar!';
@@ -354,11 +360,9 @@ function account_activation_subject( $text ) {
 
 add_filter('wpmu_signup_user_notification_email', 'account_activation_message', 10, 4);
 function account_activation_message($message, $user, $user_email, $key) {
-
   $message = sprintf(__(( "Salam!
     Untuk mengaktifkan akun Anda, silahkan klik tautan berikut:\n\n%s\n\n Setelah Anda mengaktifkannya Anda dapat masuk.\n\n" ),
   $user, $user_email, $key),site_url( "?page=gf_activation&key=$key" ));
 
   return sprintf($message);
-
 }
