@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.65' );
+	define( 'TERATUR_VERSION', '1.1.66' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -353,16 +353,15 @@ function sender_name($old) {
   return 'Alkitab Kita';
 }
 
-add_filter( 'wp_new_user_notification_subject', 'account_activation_subject', 10, 4 );
-function account_activation_subject( $text ) {
-  return 'Anda telah terdaftar!';
-}
-
 add_filter( 'wp_new_user_notification_email', 'account_activation_message', 10, 4 );
-function account_activation_message($message, $user, $user_email, $key, $meta) {
-  $message = sprintf(__(( "Salam!
-    Untuk mengaktifkan akun Anda, silahkan klik tautan berikut:\n\n%s\n\n Setelah Anda mengaktifkannya Anda dapat masuk.\n\n" ),
-  $user, $user_email, $key, $meta),site_url( "?page=gf_activation&key=$key" ));
+function account_activation_message($email, $user, $blogname) {
 
-  return sprintf($message);
+  parse_str( $email['message'], $variables);
+
+  if ( $user->has_prop( 'user_login' ) ) $user_login = $user->get( 'user_login' );
+
+  $email['message'] .= "\r\n" . "Salam!
+    Untuk mengaktifkan akun Anda, silahkan klik tautan berikut:\n\nhttps://alkitabkita.info" . $variables['key'] . $user_login. "\n\n Setelah Anda mengaktifkannya Anda dapat masuk.\n\n";
+
+  return $email;
 }
