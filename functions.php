@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.69' );
+	define( 'TERATUR_VERSION', '1.1.7' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -398,20 +398,12 @@ function account_activation_message($email, $user, $blogname) {
 
   $email['subject'] = "Anda telah terdaftar!";
   $email['message'] = "
-    <!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
-		<html xmlns=“https://www.w3.org/1999/xhtml”>
-			<head>
-				<meta charset='UTF-8'>
-				<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-				<meta name='viewport' content='width=device-width, initial-scale=1'>
-				<title>".$email['subject']."</title>
-			</head>
 			<div style='width: 100%; height: 100%; margin: 0; font: 500 18.4px Garamond, serif; letter-spacing: .015ch; word-spacing: .05ch; color: #333;'>
 				<span style='display: none !important; opacity: 0 !important; font-size: 0px !important; line-height: 0px !important; max-height: 0px !important; max-width: 0px !important; overflow: hidden !important; visibility: hidden !important;'>
 					Anda tidak akan menyesal mendaftar di Alkitab Kita!
 				</span>
 
-          <div style='font-style: italic; padding-top: 8px;'>
+        <div style='font-style: italic; padding-top: 8px;'>
 					<div style='width: 100%; max-width: 750px; padding: 0 1rem; margin: 0 auto;'>
 						<div style='width: 100%; margin-top: 1rem;'>
               <svg width='48' height='48' version='1.1' viewBox='0 0 12.7 12.7' xmlns='http://www.w3.org/2000/svg'>
@@ -451,8 +443,7 @@ function account_activation_message($email, $user, $blogname) {
 						</p>
 					</div>
         </div>
-      </div>
-    </html>";
+      </div>";
 
   return $email;
 }
