@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.68' );
+	define( 'TERATUR_VERSION', '1.1.69' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -398,19 +398,37 @@ function account_activation_message($email, $user, $blogname) {
 
   $email['subject'] = "Anda telah terdaftar!";
   $email['message'] = "
-    				<div style='font-style: italic; padding-top: 8px;'>
+    <!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+		<html xmlns=“https://www.w3.org/1999/xhtml”>
+			<head>
+				<meta charset='UTF-8'>
+				<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+				<meta name='viewport' content='width=device-width, initial-scale=1'>
+				<title>".$email['subject']."</title>
+			</head>
+			<div style='width: 100%; height: 100%; margin: 0; font: 500 18.4px Garamond, serif; letter-spacing: .015ch; word-spacing: .05ch; color: #333;'>
+				<span style='display: none !important; opacity: 0 !important; font-size: 0px !important; line-height: 0px !important; max-height: 0px !important; max-width: 0px !important; overflow: hidden !important; visibility: hidden !important;'>
+					Anda tidak akan menyesal mendaftar di Alkitab Kita!
+				</span>
+
+          <div style='font-style: italic; padding-top: 8px;'>
 					<div style='width: 100%; max-width: 750px; padding: 0 1rem; margin: 0 auto;'>
 						<div style='width: 100%; margin-top: 1rem;'>
-							<img style='display: block; height: 100px; width: 115px; margin: 0 auto;'
-								 src='https://benihyangbaik.com/photo/byb-logo-grey-transparent.png'
-								 alt='Benih Yang Baik'>
+              <svg width='48' height='48' version='1.1' viewBox='0 0 12.7 12.7' xmlns='http://www.w3.org/2000/svg'>
+                <g transform='matrix(1.5 0 0 1.5 -8.3977e-7 .00032166)'>
+                  <g transform='translate(0,-11.25)' stroke-width='.008522'>
+                    <path d='m0.37703 13.483v4.0014h5.1531v-4.0014zm0.10995 0.12076h4.9332v3.7598h-4.9332z' fill='#fff6d5'/>
+                    <path d='m2.7507 13.417v4.1322h5.3389v-4.1322zm0.17904 0.19664h4.9808v3.7389h-4.9808z' fill='#ffe680'/>
+                  </g>
+                </g>
+              </svg>
 						</div>
 						<div style='display: inline-block; width: 45%;'>
 							<p>Kepada:</p>
-							<p>'.$user_login.'</p>
+							<p>".$user_login."</p>
 						</div>
 						<div style='display: inline-block; width: 45%; text-align: right;'>
-							<p>'.$sent_date.'</p>
+							<p>".$sent_date."</p>
 						</div>
 					</div>
 				</div>
@@ -418,8 +436,8 @@ function account_activation_message($email, $user, $blogname) {
 					<div style='width: 100%; max-width: 750px; padding: 0 1rem; margin: 0 auto;'>
 						<h1 style='text-align: center; font-size: 40px; font-weight: 800; padding: 1rem 0 .5rem;'>Selamat bergabung!</h1>
 
-							<p>Salam '.$user_login.'</p>
-              <p>Untuk mengaktifkan akun Anda, silahkan <a style='color: #4976FF;' href='https://alkitabkita.info/wp-login.php?action=rp&key=" . $variables['key'] . "&login=" . $user_login. "'>klik tautan ini</a>.</p>
+							<p>Salam ".$user_login."</p>
+              <p>Untuk mengaktifkan akun Anda, silahkan <a style='color: #4976FF;' href='https://alkitabkita.info/wp-login.php?action=rp&key=".$variables['key']."&login=".$user_login."'>klik tautan ini</a>.</p>
               <p>Setelah Anda mengaktifkannya Anda dapat masuk melalui <a style='color: #4976FF;' href='https://alkitabkita.info/wp-login.php'>tautan ini</a>.</p>
 							<p>Demikian yang dapat kami sampaikan. Terima kasih.</p>
 
@@ -432,7 +450,9 @@ function account_activation_message($email, $user, $blogname) {
 							</em>
 						</p>
 					</div>
-				</div>";
+        </div>
+      </div>
+    </html>";
 
   return $email;
 }
