@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.67' );
+	define( 'TERATUR_VERSION', '1.1.68' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -362,11 +362,77 @@ function account_activation_message($email, $user, $blogname) {
   if ( $user->has_prop( 'user_email' ) ) $user_email = $user->get( 'user_email' );
 
   /* $email['to'] = $user_email; */
+  	function weekday_localization ($D_of_date_func)
+	{
+		if ($D_of_date_func === "Mon") return "Senin";
+		if ($D_of_date_func === "Tue") return "Selasa";
+		if ($D_of_date_func === "Wed") return "Rabu";
+		if ($D_of_date_func === "Thu") return "Kamis";
+		if ($D_of_date_func === "Fri") return "Jumat";
+		if ($D_of_date_func === "Sat") return "Sabtu";
+		if ($D_of_date_func === "Sun") return "Minggu";
+	}
+
+	function month_localization ($M_of_date_func)
+	{
+		if ($M_of_date_func === "Jan") return "Januari";
+		if ($M_of_date_func === "Feb") return "Februari";
+		if ($M_of_date_func === "Mar") return "Maret";
+		if ($M_of_date_func === "Apr") return "April";
+		if ($M_of_date_func === "May") return "Mei";
+		if ($M_of_date_func === "Jun" || $M_of_date_func === "June") return "Juni";
+		if ($M_of_date_func === "Jul" || $M_of_date_func === "July") return "Juli";
+		if ($M_of_date_func === "Aug") return "Agustus";
+		if ($M_of_date_func === "Sep" || $M_of_date_func === "Sept") return "September";
+		if ($M_of_date_func === "Oct") return "Oktober";
+		if ($M_of_date_func === "Nov") return "November";
+		if ($M_of_date_func === "Des") return "Desember";
+	}
+
+	$localized_weekday = date('D');
+	$localized_weekday = weekday_localization($localized_weekday);
+	$localized_month = date('M');
+	$localized_month = month_localization($localized_month);
+
+	$sent_date = $localized_weekday.", ".date('d')." ".$localized_month." ".date('Y');
+
   $email['subject'] = "Anda telah terdaftar!";
-  $email['message'] = "\r\n" . "Salam!<br><br>
-    Untuk mengaktifkan akun Anda, silahkan klik tautan berikut:<br><br>
-    https://alkitabkita.info/wp-login.php?action=rp&key=" . $variables['key'] . "&login=" . $user_login. "<br><br>
-    Setelah Anda mengaktifkannya Anda dapat masuk.";
+  $email['message'] = "
+    				<div style='font-style: italic; padding-top: 8px;'>
+					<div style='width: 100%; max-width: 750px; padding: 0 1rem; margin: 0 auto;'>
+						<div style='width: 100%; margin-top: 1rem;'>
+							<img style='display: block; height: 100px; width: 115px; margin: 0 auto;'
+								 src='https://benihyangbaik.com/photo/byb-logo-grey-transparent.png'
+								 alt='Benih Yang Baik'>
+						</div>
+						<div style='display: inline-block; width: 45%;'>
+							<p>Kepada:</p>
+							<p>'.$user_login.'</p>
+						</div>
+						<div style='display: inline-block; width: 45%; text-align: right;'>
+							<p>'.$sent_date.'</p>
+						</div>
+					</div>
+				</div>
+				<div style='background-color: #fff; border-top: 1px solid #333; border-bottom: 1px solid #333;'>
+					<div style='width: 100%; max-width: 750px; padding: 0 1rem; margin: 0 auto;'>
+						<h1 style='text-align: center; font-size: 40px; font-weight: 800; padding: 1rem 0 .5rem;'>Selamat bergabung!</h1>
+
+							<p>Salam '.$user_login.'</p>
+              <p>Untuk mengaktifkan akun Anda, silahkan <a style='color: #4976FF;' href='https://alkitabkita.info/wp-login.php?action=rp&key=" . $variables['key'] . "&login=" . $user_login. "'>klik tautan ini</a>.</p>
+              <p>Setelah Anda mengaktifkannya Anda dapat masuk melalui <a style='color: #4976FF;' href='https://alkitabkita.info/wp-login.php'>tautan ini</a>.</p>
+							<p>Demikian yang dapat kami sampaikan. Terima kasih.</p>
+
+						<p style='width: 100%; padding: .5rem 0 1rem; text-align: right;'>
+							Dengan hormat,<br>
+							<em>Alkitab Kita<br>
+								<a style='color: #4976FF;' href='https://alkitabkita.info'>
+									alkitabkita.info
+								</a>
+							</em>
+						</p>
+					</div>
+				</div>";
 
   return $email;
 }
