@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.64' );
+	define( 'TERATUR_VERSION', '1.1.65' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -353,12 +353,12 @@ function sender_name($old) {
   return 'Alkitab Kita';
 }
 
-add_filter( 'wp_signup_user_notification_subject', 'account_activation_subject', 10, 4 );
+add_filter( 'wp_new_user_notification_subject', 'account_activation_subject', 10, 4 );
 function account_activation_subject( $text ) {
   return 'Anda telah terdaftar!';
 }
 
-add_filter( 'wp_signup_user_notification_email', 'account_activation_message', 10, 4 );
+add_filter( 'wp_new_user_notification_email', 'account_activation_message', 10, 4 );
 function account_activation_message($message, $user, $user_email, $key, $meta) {
   $message = sprintf(__(( "Salam!
     Untuk mengaktifkan akun Anda, silahkan klik tautan berikut:\n\n%s\n\n Setelah Anda mengaktifkannya Anda dapat masuk.\n\n" ),
