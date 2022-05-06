@@ -9,7 +9,7 @@
 
 if ( ! defined( 'TERATUR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'TERATUR_VERSION', '1.1.66' );
+	define( 'TERATUR_VERSION', '1.1.67' );
 }
 
 if ( ! function_exists( 'teratur_setup' ) ) :
@@ -359,9 +359,14 @@ function account_activation_message($email, $user, $blogname) {
   parse_str( $email['message'], $variables);
 
   if ( $user->has_prop( 'user_login' ) ) $user_login = $user->get( 'user_login' );
+  if ( $user->has_prop( 'user_email' ) ) $user_email = $user->get( 'user_email' );
 
-  $email['message'] .= "\r\n" . "Salam!
-    Untuk mengaktifkan akun Anda, silahkan klik tautan berikut:\n\nhttps://alkitabkita.info" . $variables['key'] . $user_login. "\n\n Setelah Anda mengaktifkannya Anda dapat masuk.\n\n";
+  /* $email['to'] = $user_email; */
+  $email['subject'] = "Anda telah terdaftar!";
+  $email['message'] = "\r\n" . "Salam!<br><br>
+    Untuk mengaktifkan akun Anda, silahkan klik tautan berikut:<br><br>
+    https://alkitabkita.info/wp-login.php?action=rp&key=" . $variables['key'] . "&login=" . $user_login. "<br><br>
+    Setelah Anda mengaktifkannya Anda dapat masuk.";
 
   return $email;
 }
