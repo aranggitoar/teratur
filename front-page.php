@@ -21,10 +21,10 @@ get_template_part( 'wp-load.php' );
 		</section>
 		<section>
 			<div>
-				<a href="<?php echo esc_attr( 'https://bibledit.org:8083' ); ?>"><p>Alkitab Studi</p><p>‣</p></a>
+				<a href="<?php echo esc_attr( 'https://bibledit.org:8083' ); ?>" target="new"><p>Alkitab Studi</p><p>‣</p></a>
 			</div>
 			<div>
-				<a href="<?php echo esc_attr( 'https://alkitabkita.info/wiki/petunjuk-penggunaan-bibledit/' ); ?>"><p>Petunjuk Penggunaan Bibledit</p><p>‣</p></a>
+				<a href="<?php echo esc_attr( 'https://alkitabkita.info/wiki/petunjuk-penggunaan-bibledit/' ); ?>" target="_blank"><p>Petunjuk Penggunaan Bibledit</p><p>‣</p></a>
 			</div>
 			<div>
 				<a href="<?php echo ( !( is_user_logged_in() ) ) ? esc_attr( get_permalink( get_page_by_title( 'Kursus Alkitab Kita' ) ) ) : esc_attr( get_permalink( get_page_by_title( 'Daftar Kursus' ) ) ); ?>"><p>Kursus Alkitab Kita</p><p>‣</p></a>
